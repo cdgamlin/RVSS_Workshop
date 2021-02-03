@@ -1,0 +1,2 @@
+data_collector:penguinpi_description:penguinpi_gazebo:vision_opencv/cv_bridge:vision_opencv/image_geometry:vision_opencv/opencv_tests:vision_opencv/vision_opencv
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/RVSS_Workshop/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/RVSS_Workshop/install -G Unix Makefiles

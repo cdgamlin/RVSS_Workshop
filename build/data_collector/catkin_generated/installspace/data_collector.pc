@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/RVSS_Workshop/install
+
+Name: data_collector
+Description: Description of data_collector
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

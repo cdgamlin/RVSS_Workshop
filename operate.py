@@ -32,6 +32,10 @@ class Operate:
         else:
             self.pibot = PenguinPi(args.ip, args.port)
         # ckpt = ""
+        if args.ckpt == "":
+            self.detector = None
+        else:
+            self.detector = Detector(args.ckpt, use_gpu=False)
         self.ekf = self.init_ekf(args.calib_dir, args.ip)
         self.aruco_det = aruco.aruco_detector(
             self.ekf.robot, marker_length = 0.07)
@@ -59,12 +63,7 @@ class Operate:
         self.detector_output = np.zeros([240,320], dtype=np.uint8)
         self.img = np.zeros([240,320,3], dtype=np.uint8)
         self.aruco_img = np.zeros([240,320,3], dtype=np.uint8)
-        if args.ckpt == "":
-            self.detector = None
-            self.network_vis = cv2.imread('pics/rvss_8bit/detector_splash.png')
-        else:
-            self.detector = Detector(args.ckpt, use_gpu=False)
-            self.network_vis = np.ones((240, 320,3))* 100
+        self.network_vis = cv2.imread('pics/rvss_8bit/detector_splash.png')
         self.bg = pygame.image.load('pics/gui_mask.jpg')
 
 
