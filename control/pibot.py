@@ -16,7 +16,7 @@ class PenguinPi:
     # tick = forward speed
     # turning_tick = turning speed
     ########################################## 
-    def set_velocity(self, command, tick=20, turning_tick=5, time=0): 
+    def set_velocity(self, command, tick=20*2, turning_tick=5*4, time=0): 
         l_vel = command[0]*tick - command[1]*turning_tick
         r_vel = command[0]*tick + command[1]*turning_tick
         self.wheel_vel = [l_vel, r_vel]
