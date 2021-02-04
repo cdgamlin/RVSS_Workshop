@@ -54,7 +54,7 @@ class Resnet18Skip(nn.Module):
 
     ###################################################################
     def forward(self, img):
-		c1 = self.res18_backbone(img)
+        c1 = self.res18_backbone(img)
         c2 = self.conv2_x(c1)
         c3 = self.conv3_x(c2)
         c4 = self.conv4_x(c3)
