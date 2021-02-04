@@ -135,10 +135,10 @@ class EKF:
         F[0:3,0:3] = self.robot.derivative_drive(raw_drive_meas)
         return F
     
-    def predict_covariance(self, raw_drive_meas):
+    def predict_covariance(self, raw_drive_meas, uncertainty=0.01):
         n = self.number_landmarks()*2 + 3
         Q = np.zeros((n,n))
-        Q[0:3,0:3] = self.robot.covariance_drive(raw_drive_meas)+ 0.01*np.eye(3)
+        Q[0:3,0:3] = self.robot.covariance_drive(raw_drive_meas)+ uncertainty*np.eye(3)
         return Q
 
     def add_landmarks(self, measurements):
