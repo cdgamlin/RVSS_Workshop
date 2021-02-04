@@ -1,5 +1,5 @@
-The RMSE before alignment: 2.1771653230028276
+The RMSE before alignment: 1.782741580091669
 The following parameters optimally transform the estimated points to the ground truth.
-Rotation Angle: -2.481444550253104
-Translation Vector: (0.6170408530083753, -0.3045267077016037)
-The RMSE after alignment: 1.2442077859009073
+Rotation Angle: -2.7541391949361933
+Translation Vector: (1.0211185344421139, -0.3163251158218231)
+The RMSE after alignment: 1.5844097252874427
